@@ -7,17 +7,21 @@ const Main = () => {
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/properties_db").then(res => {
+        axios.get("http://localhost:8000/api/properties_db").then((res) => {
             setProperties(res.data);
         });
     }, []);
 
-    const deleteHandler = deletedPropertyId => {
+    const deleteHandler = (deletedPropertyId) => {
         axios
-            .delete("http://localhost:8000/api/properties_db/" + deletedPropertyId)
-            .then(res => {
+            .delete(
+                "http://localhost:8000/api/properties_db/" + deletedPropertyId
+            )
+            .then((res) => {
                 setProperties(
-                    properties.filter(property => property._id !== deletedPropertyId)
+                    properties.filter(
+                        (property) => property._id !== deletedPropertyId
+                    )
                 );
             });
     };
@@ -49,7 +53,9 @@ const Main = () => {
                             <td>
                                 <button
                                     type="button"
-                                    onClick={() => navigate("/view/" + property._id)}
+                                    onClick={() =>
+                                        navigate("/view/" + property._id)
+                                    }
                                     className="view_button"
                                 >
                                     View
