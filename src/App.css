@@ -41,6 +41,7 @@
     font-weight: bold;
     color: white;
     cursor: pointer;
+    border: 3px solid black;
 }
 
 .right-box {
@@ -59,6 +60,7 @@
     border-bottom: 2px solid black;
     color: rgb(0, 156, 235);
     border-radius: 15px;
+    text-shadow: 2px 2px 2px white;
 }
 
 .button {
@@ -93,6 +95,7 @@ td {
 }
 
 .view_button {
+    width: 85px;
     padding: 6px 20px;
     border-radius: 5px;
     background: linear-gradient(black, rgb(0, 156, 235));
@@ -102,6 +105,7 @@ td {
 }
 
 .del_button {
+    width: 85px;
     padding: 6px 20px;
     border-radius: 5px;
     background: linear-gradient(black, tomato);

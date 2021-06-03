@@ -8,10 +8,10 @@ const AddProperty = () => {
 
     const onSubmitHandler = (e, data) => {
         e.preventDefault();
-        //Send a post request to our API to create an Author
+        //Send a post request to our API to create a property
         axios
             .post("http://localhost:8000/api/properties_db", data)
-            .then(res => {
+            .then((res) => {
                 console.log(res);
                 if (res.data.errors) {
                     const errorArr = []; // Define a temp error array to push the messages in
@@ -25,7 +25,7 @@ const AddProperty = () => {
                     navigate("/");
                 }
             }) // If successful, do something with the response.
-            .catch(err => {
+            .catch((err) => {
                 console.error(err);
             });
     };

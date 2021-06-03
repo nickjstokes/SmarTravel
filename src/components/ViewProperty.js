@@ -34,9 +34,10 @@ const ViewProperty = (props) => {
                 <h1
                     style={{
                         color: "rgb(0, 156, 235)",
+                        textShadow: "2px 2px 2px white",
                     }}
                 >
-                    {property.name}
+                    SmarTravel
                 </h1>
                 <button
                     type="button"
@@ -48,24 +49,24 @@ const ViewProperty = (props) => {
             </div>
             <>
                 <div style={{ display: "flex" }}>
-                    <div style={{ margin: "30px", width: "400px" }}>
+                    <div
+                        style={{ margin: "30px 0px 0px 30px", width: "400px" }}
+                    >
                         <img
                             style={{
-                                height: "250px",
-                                width: "360px",
+                                height: "255px",
+                                width: "370px",
                                 border: "2px solid black",
                                 borderRadius: "10px",
                             }}
                             src={property.imageUrl}
                             alt="property"
                         ></img>
-                        <h1 style={{ textAlign: "center" }}>
-                            {property.squareFeet} sq ft
-                        </h1>
+                        <h2 style={{ textAlign: "center" }}>{property.name}</h2>
                     </div>
                     <div
                         style={{
-                            backgroundColor: "white",
+                            backgroundColor: "rgb(189, 228, 255)",
                             width: "300px",
                             margin: "30px",
                             padding: "10px",
@@ -74,28 +75,16 @@ const ViewProperty = (props) => {
                             borderRadius: "10px",
                         }}
                     >
-                        <h2 style={{ textAlign: "center" }}>Info</h2>
-                        {/* <br /> */}
                         <p>Property Type: {property.propertyType}</p>
-                        {/* <br /> */}
+                        <p>Square ft: {property.squareFeet}</p>
                         <p>Rooms: {property.rooms}</p>
-                        {/* <br /> */}
-                        <div>
+                        <p>
                             Self Check-in: {property.selfCheckIn ? "yes" : "no"}
-                        </div>
-                        <br />
-                        <div>Wi-Fi: {property.wiFi ? "yes" : "no"}</div>
-                        <br />
-                        <div>
-                            WorkSpace: {property.workSpace ? "yes" : "no"}
-                        </div>
-                        <br />
-                        <div>Kitchen: {property.kitchen ? "yes" : "no"}</div>
-                        <br />
-                        <div>
-                            Washer / Dryer:{" "}
-                            {property.washerDryer ? "yes" : "no"}
-                        </div>
+                        </p>
+                        <p>Wi-Fi: {property.wiFi ? "yes" : "no"}</p>
+                        <p>WorkSpace: {property.workSpace ? "yes" : "no"}</p>
+                        <p>Kitchen: {property.kitchen ? "yes" : "no"}</p>
+                        Washer / Dryer: {property.washerDryer ? "yes" : "no"}
                     </div>
                 </div>
             </>

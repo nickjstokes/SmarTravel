@@ -24,7 +24,7 @@ const PropertyForm = (props) => {
                 }}
             >
                 <div className="header">
-                    <h1>Add Property</h1>
+                    <h1>SmarTravel</h1>
                     <button
                         type="button"
                         onClick={() => navigate("/")}
@@ -58,7 +58,7 @@ const PropertyForm = (props) => {
                 >
                     <div style={{ display: "flex" }}>
                         <div className="left-box">
-                            <label>Property Name & Location:</label>
+                            <label>Property Name:</label>
                             <br />
                             <input
                                 type="text"
