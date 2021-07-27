@@ -21,6 +21,8 @@ const PropertyForm = (props) => {
                     border: "2px solid black",
                     backgroundColor: "rgb(0, 156, 235)",
                     borderRadius: "15px",
+                    fontWeight: "bold",
+                    color: "darkBlue",
                 }}
             >
                 <div className="header">
